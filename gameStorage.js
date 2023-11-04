@@ -84,3 +84,16 @@ document.addEventListener("keydown", function (event) {
     document.querySelector(".check").click();
   }
 });
+
+
+document.querySelector(".check").addEventListener("click", () => {
+    tahmin = document.querySelector(".guess").value
+
+    const tahminSayi = parseInt(tahmin);
+    if (tahminSayi >=1 && tahminSayi <= 100 && !isNaN(tahminSayi)) {
+        // Doğru sayı girilmişse oyuna devam ettir demek
+    } else {
+        mesaj.textContent = "Geçersiz sayı girdiniz 1 ile 100 arasında bir sayı giriniz"
+        skor++
+    }
+})
